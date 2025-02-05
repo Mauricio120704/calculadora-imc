@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="contenedor">
+    <div class="container">
+        <div class="section">
+            <h1>Calculadora de IMC</h1>
+            <div id="inputs"> <!--  Este es un separador de inputs -->
+                <div id="input1">
+                    <p>Indique su peso (kg)</p>
+                    <input type="number" id="peso" placeholder="Ej: 70"></input>
+                </div>
+                <div id="input2">
+                    <p>Indique su altura (cm)</p>
+                    <input type="number" id="altura" placeholder="Ej: 170"></input>
+                </div>
+            </div>
+            <button onclick="calcularIMC()">CALCULAR</button>
+        </div>
+        <div class="section">
+            <h2>RESULTADO</h2>
+            <div id="resultadoimc">
+                <p>Tu IMC es: <span id="imcValor">...</span></p>
+            </div>
+            <div class="cajaclasificacion">
+                <p>Clasificación: <span id="imcClasificacion">...</span></p>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Tabla de referencia IMC</h2>
+            <table class="tabla-imc">
+                <tr>
+                    <th>Clasificacion</th>
+                    <th>IMC</th>
+                </tr>
+
+                <tr>
+                    <td>Peso inferior</td>
+                    <td> < 18.5 </td>
+                </tr>
+                <tr>
+                    <td>Normal</td>
+                    <td>18.5 - 24.9</td>
+                </tr>
+                <tr>
+                    <td>Sobrepeso</td>
+                    <td>25.0 - 29.9</td>
+                </tr>
+                <tr>
+                    <td>Obesidad</td>
+                    <td>30.0 - 34.9</td>
+                </tr>
+                <tr>
+                    <td>Obesidad Extrema</td>
+                    <td> > 35</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<div class="historial">
+    <h2>Historial de Cálculos</h2>
+    <table class="tabla-historial">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Peso (kg)</th>
+                <th>Altura (cm)</th>
+                <th>IMC</th>
+                <th>Clasificación</th>
+            </tr>
+        </thead>
+        <tbody id="historial-body">
+        </tbody>
+    </table>
+</div>
+</div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
